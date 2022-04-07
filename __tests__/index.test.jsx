@@ -14,4 +14,10 @@ describe("Home", () => {
 
     expect(heading).toBeInTheDocument();
   });
+
+  it("renders the table", () => {
+    const { getByText } = render(<Home />);
+    const td = getByText(/Muhammad Rasyad/);
+    expect(td).toHaveTextContent("Muhammad Rasyad C");
+  });
 });

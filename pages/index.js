@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import Table from "../components/table";
+import Table from "../components/Table";
 
 export default function Home() {
   return (
