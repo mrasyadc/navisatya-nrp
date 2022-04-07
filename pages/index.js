@@ -1,76 +1,62 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import Table from "../components/table";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Navisatya NRP Finder</title>
         <meta
           name="description"
           content="NRP Finder App for Sistem Informasi ITS 2019 a.k.a Navisatya"
         />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+      <main className="mt-20">
+        <div className="text-center">
+          <Image
+            src="/ms-icon-310x310.png"
+            width="100px"
+            height="100px"
+            alt="logo navisatya"
+          />
+        </div>
+
+        <h1 className="text-5xl font-bold text-center">
+          Navisatya <span className="underline">Student ID</span> Finder
         </h1>
 
-        <h2 className="text-3xl font-bold underline">
-          This one is using Tailwind CSS
-        </h2>
-
-        <p className={styles.description}>
-          Get started by editing{" "}
-          <code className={styles.code}>pages/index.js</code>
+        <p className="text-center mt-5">
+          Start searching by pressing{" "}
+          <kbd className="bg-gray-100 p-1 rounded">Ctrl</kbd>+
+          <kbd className="bg-gray-100 p-1 rounded">k</kbd>
         </p>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+        <div className="mt-5">
+          <div className="flex justify-center items-center">
+            <input
+              type="text"
+              placeholder="Enter your input here"
+              className="pr-10 pl-4 py-2 border rounded-md focus:outline-none focus:border-blue-700 focus:ring-blue-700 placeholder:italic hover:border-black placeholder:text-slate-400 border-gray-200"
+              name="search"
+            />
+            <svg
+              className="w-4 h-4 fill-current text-gray-500 -ml-8 z-10"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="black"
+            >
+              <path d="M0 0h24v24H0V0z" fill="none" />
+              <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+            </svg>
+          </div>
+        </div>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+        <div className="mt-5 flex justify-center">
+          <Table></Table>
         </div>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
     </div>
   );
 }
