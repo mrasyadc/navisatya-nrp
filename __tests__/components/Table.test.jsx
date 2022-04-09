@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import Table from "../../components/Table";
 // import "@testing-library/jest-dom/extend-expect";
 
-describe("Home", () => {
+describe("Table", () => {
   it("renders a table", () => {
     const { getByText } = render(<Table />);
     const td = getByText(/Muhammad Rasyad/);

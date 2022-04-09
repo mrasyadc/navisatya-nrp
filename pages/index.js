@@ -1,8 +1,17 @@
 import Head from "next/head";
 import Image from "next/image";
 import Table from "../components/Table";
+import { useFocus, useKeyPress } from "../hooks/inputFocusWithKeyboard";
 
 export default function Home() {
+  const [inputRef, setFocus] = useFocus();
+  const onKeyPress = (event) => {
+    if (event.altKey && event.key === "k") {
+      setFocus();
+    }
+  };
+
+  useKeyPress(["k"], onKeyPress);
   return (
     <div>
       <Head>
@@ -29,13 +38,14 @@ export default function Home() {
 
         <p className="text-center mt-5">
           Start searching by pressing{" "}
-          <kbd className="bg-gray-100 p-1 rounded">Ctrl</kbd>+
+          <kbd className="bg-gray-100 p-1 rounded">Alt</kbd>+
           <kbd className="bg-gray-100 p-1 rounded">k</kbd>
         </p>
 
         <div className="mt-5">
           <div className="flex justify-center items-center">
             <input
+              ref={inputRef}
               type="text"
               placeholder="Enter your input here"
               className="pr-10 pl-4 py-2 border rounded-md focus:outline-none focus:border-blue-700 focus:ring-blue-700 placeholder:italic hover:border-black placeholder:text-slate-400 border-gray-200"
