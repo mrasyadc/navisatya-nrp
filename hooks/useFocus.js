@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useLayoutEffect, useRef } from "react";
+import { useRef } from "react";
 
 export const useFocus = () => {
   const ref = useRef(null);
