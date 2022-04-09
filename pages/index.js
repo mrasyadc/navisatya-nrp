@@ -1,17 +1,20 @@
 import Head from "next/head";
 import Image from "next/image";
+import { useEffect } from "react";
 import Table from "../components/Table";
-import { useFocus, useKeyPress } from "../hooks/inputFocusWithKeyboard";
-
+import { useFocus } from "../hooks/useFocus";
+import { useKeyPress } from "../hooks/useKeyPress";
 export default function Home() {
   const [inputRef, setFocus] = useFocus();
-  const onKeyPress = (event) => {
-    if (event.altKey && event.key === "k") {
+  const altPressed = useKeyPress("Alt");
+  const kPressed = useKeyPress("k");
+
+  useEffect(() => {
+    if (altPressed && kPressed) {
       setFocus();
     }
-  };
+  }, [kPressed, altPressed]);
 
-  useKeyPress(["k"], onKeyPress);
   return (
     <div>
       <Head>

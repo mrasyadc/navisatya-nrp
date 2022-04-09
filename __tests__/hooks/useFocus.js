@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { render, screen } from "@testing-library/react";
-import { useFocus, useKeyPress } from "../../hooks/inputFocusWithKeyboard";
+import { useFocus } from "../../hooks/useFocus";
 
 function Input(props) {
   const [inputRef, setFocus] = useFocus();
@@ -17,6 +17,4 @@ describe("Hooks", () => {
     const input = getByTestId("input-element");
     expect(input).toHaveFocus();
   });
-
-  // TODO: make useKeyPress more testable
 });
