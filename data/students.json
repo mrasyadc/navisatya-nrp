@@ -1,0 +1,12 @@
+{
+  "studentsData": [
+    { "name": "The Black Knight", "nrp": "05211940000001" },
+    { "name": "The Dark Knight", "nrp": "05211940000002" },
+    { "name": "The Yellow Knight", "nrp": "05211940000003" },
+    { "name": "The Black Widow", "nrp": "05211940000004" },
+    { "name": "The Black Armor", "nrp": "05211940000005" },
+    { "name": "The Yellow Armor", "nrp": "05211940000006" },
+    { "name": "The New Knight", "nrp": "05211940000007" },
+    { "name": "The Green Armor", "nrp": "05211940000008" }
+  ]
+}

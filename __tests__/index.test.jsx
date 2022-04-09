@@ -3,8 +3,10 @@
 import { render, screen } from "@testing-library/react";
 import Home from "../pages/index";
 // import "@testing-library/jest-dom/extend-expect";
+const { studentsData } = require("../data/students.json");
 
 describe("Home", () => {
+  const name = studentsData[0].name;
   it("renders a heading", () => {
     render(<Home />);
 
@@ -17,7 +19,7 @@ describe("Home", () => {
 
   it("renders the table", () => {
     const { getByText } = render(<Home />);
-    const td = getByText(/Muhammad Rasyad/);
-    expect(td).toHaveTextContent("Muhammad Rasyad C");
+    const td = getByText(name);
+    expect(td).toHaveTextContent(name);
   });
 });

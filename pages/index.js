@@ -1,19 +1,37 @@
 import Head from "next/head";
 import Image from "next/image";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import Table from "../components/Table";
 import { useFocus } from "../hooks/useFocus";
 import { useKeyPress } from "../hooks/useKeyPress";
+const { studentsData } = require("../data/students.json");
+
 export default function Home() {
   const [inputRef, setFocus] = useFocus();
   const altPressed = useKeyPress("Alt");
   const kPressed = useKeyPress("k");
+  const [searchTerm, setSearchTerm] = useState("");
+  const [students, setStudents] = useState(studentsData);
 
   useEffect(() => {
     if (altPressed && kPressed) {
       setFocus();
     }
   }, [kPressed, altPressed]);
+
+  useEffect(() => {
+    const results = studentsData.filter((student) => {
+      return (
+        student.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        student.nrp.includes(searchTerm)
+      );
+    });
+    setStudents(results);
+  }, [searchTerm]);
+
+  const onSearch = (e) => {
+    setSearchTerm(e.target.value);
+  };
 
   return (
     <div>
@@ -48,9 +66,11 @@ export default function Home() {
         <div className="mt-5">
           <div className="flex justify-center items-center">
             <input
+              value={searchTerm}
+              onChange={(e) => onSearch(e)}
               ref={inputRef}
               type="text"
-              placeholder="Enter your input here"
+              placeholder="Enter student id / name here"
               className="pr-10 pl-4 py-2 border rounded-md focus:outline-none focus:border-blue-700 focus:ring-blue-700 placeholder:italic hover:border-black placeholder:text-slate-400 border-gray-200"
               name="search"
             />
@@ -67,7 +87,7 @@ export default function Home() {
         </div>
 
         <div className="mt-5 flex justify-center">
-          <Table></Table>
+          <Table students={students}></Table>
         </div>
       </main>
     </div>
