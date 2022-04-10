@@ -6,6 +6,7 @@ import { useFocus } from "../hooks/useFocus";
 import { useKeyPress } from "../hooks/useKeyPress";
 const { studentsData } = require("../data/students.json");
 import { Toaster, toast } from "react-hot-toast";
+import Link from "next/link";
 
 export default function Home() {
   const [inputRef, setFocus] = useFocus();
@@ -59,6 +60,28 @@ export default function Home() {
           <h1 className="text-5xl font-bold text-center">
             Navisatya <span className="underline">Student ID</span> Finder
           </h1>
+
+          <p className="text-center mt-5">
+            App and Design by {` `}
+            <Link href={"https://github.com/mrasyadc"}>
+              <a className="text-gray-600 hover:text-black">
+                Muhammad Rasyad C
+              </a>
+            </Link>
+            <br />
+            Data preprocessed by {` `}
+            <Link href={"https://github.com/farrelarrizal"}>
+              <a className="text-gray-600 hover:text-black">Farrel Arrizal, </a>
+            </Link>
+            <Link href={"https://github.com/nicolaswonoadi"}>
+              <a className="text-gray-600 hover:text-black">
+                Alexander Nicolas Wonoadi,{" "}
+              </a>
+            </Link>
+            <Link href={"https://github.com/evanradith"}>
+              <a className="text-gray-600 hover:text-black">Evan Raditya</a>
+            </Link>
+          </p>
 
           <p className="text-center mt-5">
             Start searching by pressing{" "}
