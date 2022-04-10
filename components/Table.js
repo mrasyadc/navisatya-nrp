@@ -19,7 +19,7 @@ export default function Table({ students }) {
             {students.map((student) => {
               return (
                 <tr key={student.nrp}>
-                  <td className="border-b border-slate-100 p-4 pl-8 text-slate-500">
+                  <td className="border-b border-slate-100 p-4 pl-8 text-slate-500 capitalize">
                     {student.name}
                   </td>
                   <td className="border-b border-slate-100 p-4 text-slate-500">
