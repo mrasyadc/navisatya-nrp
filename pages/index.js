@@ -61,14 +61,6 @@ export default function Home() {
           </h1>
 
           <p className="text-center mt-5">
-            Disclaimer: This is a demo app for Sistem Informasi ITS 2019 and{" "}
-            <br />
-            still using dummy data that are collected unofficially.
-            <br />
-            The completeness of the data is not guaranteed.
-          </p>
-
-          <p className="text-center mt-5">
             Start searching by pressing{" "}
             <kbd className="bg-gray-100 p-1 rounded">Alt</kbd>+
             <kbd className="bg-gray-100 p-1 rounded">k</kbd>
