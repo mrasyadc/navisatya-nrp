@@ -95,6 +95,7 @@ export default function Document() {
         <Main />
         <NextScript />
       </body>
+            <script defer src="https://umami.mrasyadc.com/script.js" data-website-id="b7c92fa4-d02f-48bb-8614-d0da31068e6a"></script>
     </Html>
   );
 }
