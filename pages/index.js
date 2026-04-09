@@ -63,23 +63,22 @@ export default function Home() {
 
           <p className="text-center mt-5">
             App and Design by {` `}
-            <Link legacyBehavior href={"https://github.com/mrasyadc"}>
-              <a className="text-gray-600 hover:text-black">
+            <Link href={"https://github.com/mrasyadc"} className="text-gray-600 hover:text-black">
+              
                 Muhammad Rasyad C
-              </a>
+              
             </Link>
             <br />
             Data preprocessed by {` `}
-            <Link legacyBehavior href={"https://github.com/farrelarrizal"}>
-              <a className="text-gray-600 hover:text-black">Farrel Arrizal, </a>
+            <Link href={"https://github.com/farrelarrizal"} className="text-gray-600 hover:text-black">
+              Farrel Arrizal, 
             </Link>
-            <Link legacyBehavior href={"https://github.com/nicolaswonoadi"}>
-              <a className="text-gray-600 hover:text-black">
-                Alexander Nicolas Wonoadi,{" "}
-              </a>
+            <Link href={"https://github.com/nicolaswonoadi"} className="text-gray-600 hover:text-black">
+              Alexander Nicolas Wonoadi,{" "}
+
             </Link>
-            <Link legacyBehavior href={"https://github.com/evanradith"}>
-              <a className="text-gray-600 hover:text-black">Evan Raditya</a>
+            <Link href={"https://github.com/evanradith"} className="text-gray-600 hover:text-black">
+              Evan Raditya
             </Link>
           </p>
 
