@@ -54,6 +54,7 @@ export default function Home() {
               width="100"
               height="100"
               alt="logo navisatya"
+              className="mx-auto"
             />
           </div>
 
