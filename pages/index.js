@@ -51,8 +51,8 @@ export default function Home() {
           <div className="text-center">
             <Image
               src="/ms-icon-310x310.png"
-              width="100px"
-              height="100px"
+              width="100"
+              height="100"
               alt="logo navisatya"
             />
           </div>
@@ -63,22 +63,22 @@ export default function Home() {
 
           <p className="text-center mt-5">
             App and Design by {` `}
-            <Link href={"https://github.com/mrasyadc"}>
+            <Link legacyBehavior href={"https://github.com/mrasyadc"}>
               <a className="text-gray-600 hover:text-black">
                 Muhammad Rasyad C
               </a>
             </Link>
             <br />
             Data preprocessed by {` `}
-            <Link href={"https://github.com/farrelarrizal"}>
+            <Link legacyBehavior href={"https://github.com/farrelarrizal"}>
               <a className="text-gray-600 hover:text-black">Farrel Arrizal, </a>
             </Link>
-            <Link href={"https://github.com/nicolaswonoadi"}>
+            <Link legacyBehavior href={"https://github.com/nicolaswonoadi"}>
               <a className="text-gray-600 hover:text-black">
                 Alexander Nicolas Wonoadi,{" "}
               </a>
             </Link>
-            <Link href={"https://github.com/evanradith"}>
+            <Link legacyBehavior href={"https://github.com/evanradith"}>
               <a className="text-gray-600 hover:text-black">Evan Raditya</a>
             </Link>
           </p>
